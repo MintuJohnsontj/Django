@@ -12,3 +12,5 @@ IDE Commandline:
     
     >cd DEMPROJECT
     >python manage.py runserver
+
+<img src="Images/django2.PNG" width="500" height="400">
