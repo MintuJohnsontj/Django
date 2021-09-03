@@ -2,6 +2,8 @@
 
 [Edureka tutorial](https://www.youtube.com/watch?v=zuxzE7--RYM&t=1036s)
 
+[Tutuorialspoint](https://www.tutorialspoint.com/django/index.htm)
+
 ## Step 1: Installing Django
 IDE Commandline:
 
