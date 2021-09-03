@@ -5,7 +5,6 @@
 [Tutuorialspoint](https://www.tutorialspoint.com/django/index.htm)
 
 ## Step 1: Installing Django
-IDE Commandline:
 
     $pip install django
 
