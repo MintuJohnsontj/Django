@@ -42,4 +42,6 @@ Like most modern framework, Django supports the MVC pattern. When talking about 
 
 ### DJANGO MVC - MVT Pattern
 
-The Model-View-Template (MVT) is slightly different from MVC. In fact the main difference between the two patterns is that Django itself takes care of the Controller part (Software Code that controls the interactions between the Model and View), leaving us with the template. The template is a HTML file mixed with Django Template Language (DTL).
+The Model-View-Template (MVT) is slightly different from MVC. In fact the main difference between the two patterns is that Django itself takes care of the Controller part (Software Code that controls the interactions between the Model and View), leaving us with the template. The template is an HTML file mixed with Django Template Language (DTL).
+
+<img src="Images/djangobasics1." width="500" height="400">
