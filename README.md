@@ -6,4 +6,4 @@ IDE Commandline:
     
     django-admin startproject <project-name>
 
-<img src="Images/django1.PNG" width="400" height="379">
+<img src="Images/django1.PNG" width="400" height="400">
