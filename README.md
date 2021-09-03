@@ -1,6 +1,6 @@
 # Django
 
-[https://www.youtube.com/watch?v=zuxzE7--RYM&t=1036s](https://www.youtube.com/watch?v=zuxzE7--RYM&t=1036s)
+[Edureka tutorial](https://www.youtube.com/watch?v=zuxzE7--RYM&t=1036s)
 
 IDE Commandline:
 
