@@ -39,17 +39,17 @@ Note − Number 5 and 6 are NoSQL databases.
 
 The “DEMOPROJECT” folder is just our project container, it actually contains two elements −
 
-    * The “myproject” subfolder : This folder is the actual python package of our project. It contains 4 files −
+* The “myproject” subfolder : This folder is the actual python package of our project. It contains 4 files −
 
-    __init__.py : Just for python, treat this folder as package.
+__init__.py : Just for python, treat this folder as package.
 
-    settings.py : As the name indicates, our project settings.
+settings.py : As the name indicates, our project settings.
 
-    urls.py : All links of your project and the function to call. A kind of ToC of our project.
+urls.py : All links of your project and the function to call. A kind of ToC of our project.
 
-    wsgi.py : If we need to deploy our project over WSGI.
+wsgi.py : If we need to deploy our project over WSGI.
     
-    * manage.py: This file is kind of your project local django-admin for interacting with your project via command line (start the development server, sync db...). 
+* manage.py: This file is kind of your project local django-admin for interacting with your project via command line (start the development server, sync db...). 
 
 ## Step 4: Setting Up Our Project
 
