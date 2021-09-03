@@ -6,7 +6,7 @@ IDE Commandline:
 
     >pip install django
     
-    >django-admin startproject <project-name> { Here, project-name = DEMPROJECT }
+    >django-admin startproject <project-name> { Here, project-name = DEMOPROJECT }
 
 <img src="Images/django1.PNG" width="500" height="400">
     
