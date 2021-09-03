@@ -1,6 +1,6 @@
 # Django
 
-[Tutuorialspoint](https://www.tutorialspoint.com/django/django_basics.htm)
+[Tutuorialspoint](https://www.tutorialspoint.com/django/index.htm)
 
 Django is a web development framework that assists in building and maintaining quality web applications. Django helps eliminate repetitive tasks making the development process an easy and time saving experience. This tutorial gives a complete understanding of Django. Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Django makes it easier to build better web apps quickly and with less code.
 
