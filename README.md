@@ -80,8 +80,41 @@ Now that your project is created and configured make sure it's working :
 
 <img src="Images/django2.PNG" width="500" height="400">
 
-Create new app in project:
+## Step 5: Create an Application
 
      $python manage.py startapp DEMOAPP { Here, DEMOAPP = App name }
+     
+We just created DEMOAPP application and like project, Django create a “DEMOAPP” folder with the application structure:
+
+    DEMOAPP/
+       __init__.py
+       admin.py
+       models.py
+       tests.py
+       views.py
+       
+* __init__.py − Just to make sure python handles this folder as a package.
+
+* admin.py − This file helps you make the app modifiable in the admin interface.
+
+* models.py − This is where all the application models are stored.
+
+* tests.py − This is where your unit tests are.
+
+* views.py − This is where your application views are.
         
 <img src="Images/django3.PNG" width="500" height="400">
+
+## Step 6: Get the Project to Know About Our Application
+
+At this stage we have our "DEMOAPP" application, now we need to register it with our Django project "myproject". To do so, update INSTALLED_APPS tuple in the settings.py file of our project (add our app name):
+
+    INSTALLED_APPS = (
+       'django.contrib.admin',
+       'django.contrib.auth',
+       'django.contrib.contenttypes',
+       'django.contrib.sessions',
+       'django.contrib.messages',
+       'django.contrib.staticfiles',
+       'myapp',
+    )
