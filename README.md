@@ -14,3 +14,9 @@ IDE Commandline:
     >python manage.py runserver
 
 <img src="Images/django2.PNG" width="500" height="400">
+
+Create new app in project:
+
+        python manage.py startapp DEMOAPP { Here, DEMOAPP = App name }
+        
+<img src="Images/django3.PNG" width="500" height="400">
