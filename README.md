@@ -4,6 +4,13 @@
 
 [Tutuorialspoint](https://www.tutorialspoint.com/django/index.htm)
 
+## Web Development Algorithm
+
+1. Environment- Install django and set up database
+2. Project creation- Create and set up project  
+3. Apps life cycle- Create app
+4. Admin interface
+
 ## Step 1: Environment
 
 Django development environment consists of installing and setting up Python, Django and a Database System. Since Django deals with web application, it's worth mentioning that we would need a web server setup as well.
@@ -97,7 +104,7 @@ A project is a sum of many applications. Every application has an objective and 
 
 ### Create an Application
 
-We assume you are in your project folder. In our main “myproject” folder, the same folder then manage.py:
+We assume you are in your project folder. In our main “DEMOPROJECT” folder, the same folder then manage.py:
 
      $python manage.py startapp DEMOAPP { Here, DEMOAPP = App name }
      
@@ -155,7 +162,9 @@ For MIDDLEWARE_CLASSES:
    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     )
     
-Before launching your server, to access your Admin Interface, you need to initiate the database:
+### Initiate Database
+
+Before launching our server, to access our Admin Interface, we need to initiate the database:
 
     $ python manage.py migrate
     
