@@ -1,6 +1,6 @@
 # Django
 
-[Edureka tutorial](https://www.youtube.com/watch?v=zuxzE7--RYM&t=1036s)
+[Edureka tutorial](https://www.youtube.com/watch?v=zuxzE7--RYM&t=1036s), [Edureka complete tutorial](https://www.youtube.com/watch?v=HRLIEgwYSHc&t=1865s)
 
 [Tutuorialspoint](https://www.tutorialspoint.com/django/index.htm)
 
