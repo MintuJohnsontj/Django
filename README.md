@@ -167,7 +167,14 @@ For MIDDLEWARE_CLASSES:
 Before launching our server, to access our Admin Interface, we need to initiate the database:
 
     $ python manage.py migrate
-    
+.    
+    $ python manage.py shell
+    $ from DEMOAPP.models import AllCourses, details
+    $ AllCourses.objects.all()
+    $ a=AllCourses(coursename="Python",insname="XYZ")
+    $ a.save()
+    $ a.coursename
+
 syncdb will create necessary tables or collections depending on our db type, necessary for the admin interface to run. Even if we don't have a superuser, we will be prompted to create one.
 
 If we already have a superuser or have forgotten it, we can always create one using the following code:
