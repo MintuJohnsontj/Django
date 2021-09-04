@@ -116,5 +116,5 @@ At this stage we have our "DEMOAPP" application, now we need to register it with
        'django.contrib.sessions',
        'django.contrib.messages',
        'django.contrib.staticfiles',
-       'myapp',
+       'DEMOPROJECT',
     )
