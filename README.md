@@ -107,7 +107,7 @@ We just created DEMOAPP application and like project, Django create a “DEMOAPP
 
 ## Step 6: Get the Project to Know About Our Application
 
-At this stage we have our "DEMOAPP" application, now we need to register it with our Django project "myproject". To do so, update INSTALLED_APPS tuple in the settings.py file of our project (add our app name):
+At this stage we have our "DEMOAPP" application, now we need to register it with our Django project "DEMOPROJECT". To do so, update INSTALLED_APPS tuple in the settings.py file of our project (add our app name):
 
     INSTALLED_APPS = (
        'django.contrib.admin',
@@ -116,5 +116,5 @@ At this stage we have our "DEMOAPP" application, now we need to register it with
        'django.contrib.sessions',
        'django.contrib.messages',
        'django.contrib.staticfiles',
-       'DEMOPROJECT',
+       'DEMOAPP',
     )
