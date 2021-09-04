@@ -176,12 +176,15 @@ Database:
     $ a=AllCourses(coursename="Python",insname="XYZ")
     $ a.save()
     $ a.coursename
+    $ exit()
 
 syncdb will create necessary tables or collections depending on our db type, necessary for the admin interface to run. Even if we don't have a superuser, we will be prompted to create one.
 
 If we already have a superuser or have forgotten it, we can always create one using the following code:
 
     $ python manage.py createsuperuser
+    
+Now enter email and password.
     
  Now to start the Admin Interface, we need to make sure we have configured a URL for our admin interface. Open the myproject/url.py and you should have something like:
  
