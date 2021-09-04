@@ -167,7 +167,9 @@ For MIDDLEWARE_CLASSES:
 Before launching our server, to access our Admin Interface, we need to initiate the database:
 
     $ python manage.py migrate
-.    
+    
+Database:
+
     $ python manage.py shell
     $ from DEMOAPP.models import AllCourses, details
     $ AllCourses.objects.all()
