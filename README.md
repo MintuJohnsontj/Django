@@ -39,7 +39,7 @@ Note − Number 5 and 6 are NoSQL databases.
 
 The “DEMOPROJECT” folder is just our project container, it actually contains two elements −
 
-* The “myproject” subfolder : This folder is the actual python package of our project. It contains 4 files −
+* The “DEMOPROJECT” subfolder : This folder is the actual python package of our project. It contains 4 files −
 
 __init__.py : Just for python, treat this folder as package.
 
