@@ -4,11 +4,15 @@
 
 [Tutuorialspoint](https://www.tutorialspoint.com/django/index.htm)
 
-## Step 1: Installing Django
+## Step 1: Environment
 
-    $pip install django
+Django development environment consists of installing and setting up Python, Django and a Database System. Since Django deals with web application, it's worth mentioning that we would need a web server setup as well.
 
-## Step 2: Database Setup
+### Install django
+
+    $ pip install django
+
+### Database Setup
     
 Django supports several major database engines and you can set up any of them based on your comfort.
 
@@ -22,7 +26,13 @@ Django supports several major database engines and you can set up any of them ba
 
 Note − Number 5 and 6 are NoSQL databases.
 
-## Step 3: Create a Project
+## Step 2: Create a Project
+
+Now that we have installed Django, let's start using it. In Django, every web app we want to create is called a project; and a project is a sum of applications. An application is a set of code files relying on the MVT pattern. As example let's say we want to build a website, the website is our project and, the forum, news, contact engine are applications. This structure makes it easier to move an application between projects since every application is independent.
+
+### Create a Project
+
+Whether you are on Windows or Linux, just get a terminal or a cmd prompt and navigate to the place you want your project to be created, then use this code:
 
     $django-admin startproject <project-name> { Here, project-name = DEMOPROJECT }
     
@@ -35,6 +45,7 @@ Note − Number 5 and 6 are NoSQL databases.
             urls.py
             wsgi.py
         manage.py
+
 ### The Project Structure
 
 The “DEMOPROJECT” folder is just our project container, it actually contains two elements −
@@ -51,7 +62,7 @@ wsgi.py : If we need to deploy our project over WSGI.
     
 * manage.py: This file is kind of your project local django-admin for interacting with your project via command line (start the development server, sync db...). 
 
-## Step 4: Setting Up Our Project
+### Setting Up Our Project
 
 Our project is set up in the subfolder myproject/settings.py.
 
@@ -75,12 +86,18 @@ Database is set in the ‘Database’ dictionary. The example above is for SQLit
 
 Now that your project is created and configured make sure it's working :
 
-    $cd DEMOPROJECT
-    $python manage.py runserver
+    $ cd DEMOPROJECT
+    $ python manage.py runserver
 
 <img src="Images/django2.PNG" width="500" height="400">
 
-## Step 5: Create an Application
+## Step 3: Apps Life Cycle
+
+A project is a sum of many applications. Every application has an objective and can be reused into another project, like the contact form on a website can be an application, and can be reused for others. See it as a module of your project.
+
+### Create an Application
+
+We assume you are in your project folder. In our main “myproject” folder, the same folder then manage.py:
 
      $python manage.py startapp DEMOAPP { Here, DEMOAPP = App name }
      
@@ -105,7 +122,7 @@ We just created DEMOAPP application and like project, Django create a “DEMOAPP
         
 <img src="Images/django3.PNG" width="500" height="400">
 
-## Step 6: Get the Project to Know About Our Application
+### Get the Project to Know About Our Application
 
 At this stage we have our "DEMOAPP" application, now we need to register it with our Django project "DEMOPROJECT". To do so, update INSTALLED_APPS tuple in the settings.py file of our project (add our app name):
 
@@ -118,3 +135,53 @@ At this stage we have our "DEMOAPP" application, now we need to register it with
        'django.contrib.staticfiles',
        'DEMOAPP',
     )
+    
+## Step 4: Admin Interface
+
+Django provides a ready-to-use user interface for administrative activities. We all know how an admin interface is important for a web project. Django automatically generates admin UI based on your project models.
+
+### Starting the Admin Interface
+   
+The Admin interface depends on the django.countrib module. To have it working you need to make sure some modules are imported in the INSTALLED_APPS and MIDDLEWARE_CLASSES tuples of the myproject/settings.py file.
+
+For MIDDLEWARE_CLASSES:
+
+    MIDDLEWARE_CLASSES = (
+   'django.contrib.sessions.middleware.SessionMiddleware',
+   'django.middleware.common.CommonMiddleware',
+   'django.middleware.csrf.CsrfViewMiddleware',
+   'django.contrib.auth.middleware.AuthenticationMiddleware',
+   'django.contrib.messages.middleware.MessageMiddleware',
+   'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    )
+    
+Before launching your server, to access your Admin Interface, you need to initiate the database:
+
+    $ python manage.py migrate
+    
+syncdb will create necessary tables or collections depending on our db type, necessary for the admin interface to run. Even if we don't have a superuser, we will be prompted to create one.
+
+If we already have a superuser or have forgotten it, we can always create one using the following code:
+
+    $ python manage.py createsuperuser
+    
+ Now to start the Admin Interface, we need to make sure we have configured a URL for our admin interface. Open the myproject/url.py and you should have something like:
+ 
+    from django.conf.urls import patterns, include, url
+
+    from django.contrib import admin
+    admin.autodiscover()
+
+    urlpatterns = patterns('',
+       # Examples:
+       # url(r'^$', 'myproject.views.home', name = 'home'),
+       # url(r'^blog/', include('blog.urls')),
+
+       url(r'^admin/', include(admin.site.urls)),
+    )
+
+Now just run the server.
+
+    $ python manage.py runserver
+    
+And your admin interface is accessible at: http://127.0.0.1:7000/admin/
