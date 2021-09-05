@@ -79,14 +79,23 @@ This option tells whether project is in debug mode or not. Debug mode help us to
 
 
     DATABASES = {
+    
        'default': {
+       
           'ENGINE': 'django.db.backends.sqlite3',
+          
           'NAME': 'database.sql',
+          
           'USER': '',
+          
           'PASSWORD': '',
+          
           'HOST': '',
+          
           'PORT': '',
+          
        }
+       
     }
     
 Database is set in the ‘Database’ dictionary. The example above is for SQLite engine. Before setting any new engine, make sure we have the correct db driver installed. We can also set others options like: TIME_ZONE, LANGUAGE_CODE, TEMPLATE…
