@@ -79,8 +79,7 @@ This option tells whether project is in debug mode or not. Debug mode help us to
 
 
     DATABASES = {
-    
-       'default': {
+           'default': {
        
           'ENGINE': 'django.db.backends.sqlite3',
           
@@ -115,7 +114,7 @@ A project is a sum of many applications. Every application has an objective and 
 
 We assume you are in your project folder. In our main “DEMOPROJECT” folder, the same folder then manage.py:
 
-     $python manage.py startapp DEMOAPP { Here, DEMOAPP = App name }
+     $ python manage.py startapp DEMOAPP { Here, DEMOAPP = App name }
      
 We just created DEMOAPP application and like project, Django create a “DEMOAPP” folder with the application structure:
 
