@@ -79,8 +79,7 @@ This option tells whether project is in debug mode or not. Debug mode help us to
 
 
     DATABASES = {
-           'default': {
-       
+        'default': {       
           'ENGINE': 'django.db.backends.sqlite3',
           
           'NAME': 'database.sql',
