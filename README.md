@@ -41,7 +41,7 @@ Now that we have installed Django, let's start using it. In Django, every web ap
 
 Whether you are on Windows or Linux, just get a terminal or a cmd prompt and navigate to the place you want your project to be created, then use this code:
 
-    $django-admin startproject <project-name> { Here, project-name = DEMOPROJECT }
+    $ django-admin startproject <project-name> { Here, project-name = DEMOPROJECT }
     
 <img src="Images/django1.PNG" width="500" height="400">
 
