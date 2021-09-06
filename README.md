@@ -295,3 +295,30 @@ This function takes three parameters −
 
 * Dictionary of parameters − A dictionary that contains all variables needed in the template. This variable can be created or you can use locals() to pass all local variable declared in the view.
 
+### Django Template Language (DTL)
+
+Django’s template engine offers a mini-language to define the user-facing layer of the application.
+
+#### Displaying Variables
+
+A variable looks like this: {{variable}}. The template replaces the variable by the variable sent by the view in the third parameter of the render function.
+
+    <html>
+
+       <body>
+          Hello World!!!<p>Today is {{today}}</p>
+       </body>
+
+    </html>
+    
+Then our view will change to:
+
+    def hello(request):
+       today = datetime.datetime.now().date()
+       return render(request, "hello.html", {"today" : today})
+
+As you have probably noticed, if the variable is not a string, Django will use the __str__ method to display it; and with the same principle you can access an object attribute just like you do it in Python. For example: if we wanted to display the date year, my variable would be: {{today.year}}.
+
+## Step 8: Models
+
+A model is a class that represents table or collection in our DB, and where every attribute of the class is a field of the table or collection. Models are defined in the app/models.py (in our example: DEMOAPP/models.py)
