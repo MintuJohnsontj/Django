@@ -206,3 +206,17 @@ Now just run the server.
     $ python manage.py runserver
     
 And your admin interface is accessible at: http://127.0.0.1:7000/admin/
+
+## Step 5: Views
+
+A view function, or “view” for short, is simply a Python function that takes a web request and returns a web response. This response can be the HTML contents of a Web page, or a redirect, or a 404 error, or an XML document, or an image, etc. Example: You use view to create web pages, note that you need to associate a view to a URL to see it as a web page.
+
+In Django, views have to be created in the app views.py file.
+
+### Simple View
+
+    from django.http import HttpResponse
+
+    def hello(request):
+       text = """<h1>welcome to my app !</h1>"""
+       return HttpResponse(text)
