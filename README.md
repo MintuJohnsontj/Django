@@ -1,8 +1,8 @@
 # Django
 
-[Edureka tutorial](https://www.youtube.com/watch?v=zuxzE7--RYM&t=1036s), [Edureka complete tutorial](https://www.youtube.com/watch?v=HRLIEgwYSHc&t=1865s)
+[Django official site](https://docs.djangoproject.com), [Edureka tutorial](https://www.youtube.com/watch?v=zuxzE7--RYM&t=1036s), 
 
-[Tutuorialspoint](https://www.tutorialspoint.com/django/index.htm)
+[Edureka complete tutorial](https://www.youtube.com/watch?v=HRLIEgwYSHc&t=1865s), [Tutuorialspoint](https://www.tutorialspoint.com/django/index.htm)
 
 ## Web Development Algorithm
 
@@ -324,3 +324,15 @@ As you have probably noticed, if the variable is not a string, Django will use t
 ## Step 8: Models
 
 A model is a class that represents table or collection in our DB, and where every attribute of the class is a field of the table or collection. Models are defined in the app/models.py (in our example: DEMOAPP/models.py)
+
+### Creating a Model
+
+from django.db import models
+
+class AllCourses(models.Model):
+    coursename = models.CharField(max_length=200)
+    insname = models.CharField(max_length=100)
+    def __str__(self):
+        return self.coursename
+
+Every model inherits from django.db.models.Model.
