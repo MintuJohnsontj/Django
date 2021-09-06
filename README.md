@@ -8,8 +8,8 @@
 
 1. Environment- Install django and set up database
 2. Project creation- Create and set up project  
-3. Apps life cycle- Create app
-4. Admin interface
+3. Apps life cycle- Create app and get the project to know about application.
+4. Admin interface- Start the admin interface and initiate database.
 
 ## Step 1: Environment
 
