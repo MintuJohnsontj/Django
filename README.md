@@ -281,3 +281,17 @@ When a user makes a request for a page on your web app, Django controller takes 
 ### Sending Parameters to Views
 
 
+## Step 7: Template System
+
+Django makes it possible to separate python and HTML, the python goes in views and HTML goes in templates. To link the two, Django relies on the render function and the Django Template language.
+
+### The Render Function
+
+This function takes three parameters −
+
+* Request − The initial request.
+
+* The path to the template − This is the path relative to the TEMPLATE_DIRS option in the project settings.py variables.
+
+* Dictionary of parameters − A dictionary that contains all variables needed in the template. This variable can be created or you can use locals() to pass all local variable declared in the view.
+
