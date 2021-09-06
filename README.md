@@ -238,7 +238,42 @@ We used HttpResponse to render the HTML in the view before. This is not the best
         context = {'ac': ac }
         return HttpResponse(template.render(context, request))
 
+### Passing paramater
+
 Views can also accept parameters:
 
     def detail(request, course_id):
         return HttpResponse('<h2>These are course details for course id' +str(course_id)+'</h2>')
+        
+When linked to a URL, the page will display the number passed as a parameter. Note that the parameters will be passed via the URL (discussed in the next chapter).
+
+## Step 6: URL mapping
+
+Now that we have a working view as explained in the previous chapters. We want to access that view via a URL. Django has his own way for URL mapping and it's done by editing your project url.py file (DEMOPROJECT/url.py). The url.py file looks like:
+
+    from django.contrib import admin
+    from django.urls import path
+
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+    ]
+
+When a user makes a request for a page on your web app, Django controller takes over to look for the corresponding view via the url.py file, and then return the HTML response or a 404 not found error, if not found. In url.py, the most important thing is the "urlpatterns" tuple. It’s where you define the mapping between URLs and views. A mapping is a tuple in URL patterns like:
+
+    from django.contrib import admin
+    from django.urls import path, include
+
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include('DEMOAPP.urls')),
+    ]
+    
+### Sending Parameters to Views
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('<int:course_id>/', views.detail, name='detail'),
+    path('', views.Courses, name = 'home-page'),
+]
