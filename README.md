@@ -75,7 +75,7 @@ wsgi.py : If we need to deploy our project over WSGI.
 
 ### Setting Up Our Project
 
-Our project is set up in the subfolder myproject/settings.py.
+Our project is set up in the subfolder DEMOPROJECT/settings.py.
 
     DEBUG = True
 
@@ -153,7 +153,7 @@ Django provides a ready-to-use user interface for administrative activities. We 
 
 ### Starting the Admin Interface
    
-The Admin interface depends on the django.countrib module. To have it working you need to make sure some modules are imported in the INSTALLED_APPS and MIDDLEWARE_CLASSES tuples of the myproject/settings.py file.
+The Admin interface depends on the django.countrib module. To have it working you need to make sure some modules are imported in the INSTALLED_APPS and MIDDLEWARE_CLASSES tuples of the DEMOPROJECT/settings.py file.
 
 For MIDDLEWARE_CLASSES:
 
@@ -190,7 +190,7 @@ If we already have a superuser or have forgotten it, we can always create one us
     
 Now enter email and password.
     
- Now to start the Admin Interface, we need to make sure we have configured a URL for our admin interface. Open the myproject/url.py and you should have something like:
+ Now to start the Admin Interface, we need to make sure we have configured a URL for our admin interface. Open the DEMOPROJECT/url.py and you should have something like:
  
     from django.conf.urls import patterns, include, url
 
