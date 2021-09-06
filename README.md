@@ -337,3 +337,10 @@ A model is a class that represents table or collection in our DB, and where ever
 
 Every model inherits from django.db.models.Model.
 
+## Step 9: Django ModelForms
+
+It is a class which is used to create an HTML form by using the Model. It is an efficient way to create a form without writing HTML code.
+
+Django automatically does it for us to reduce the application development time. For example, suppose we have a model containing various fields, we don't need to repeat the fields in the form file.
+
+For this reason, Django provides a helper class which allows us to create a Form class from a Django model.
