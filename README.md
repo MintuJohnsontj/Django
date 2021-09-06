@@ -12,6 +12,8 @@
 4. Admin interface- Start the admin interface and initiate database.
 5. Views - Render function and passing parameter.
 6. URL mapping
+7. Template System
+8. Models
 
 ## Step 1: Environment
 
