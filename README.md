@@ -220,3 +220,25 @@ In Django, views have to be created in the app views.py file.
     def hello(request):
        text = """<h1>welcome to my app !</h1>"""
        return HttpResponse(text)
+
+In this view, we use HttpResponse to render the HTML (as you have probably noticed we have the HTML hard coded in the view). To see this view as a page we just need to map it to a URL.
+
+### Render Function
+
+We used HttpResponse to render the HTML in the view before. This is not the best way to render pages. Django supports the MVT pattern so to make the precedent view, Django - MVT like, we will need:
+
+    from django.shortcuts import render
+    from django.http import HttpResponse
+    from django.template import loader
+    from .models import AllCourses
+
+    def Courses(request):
+        ac = AllCourses.objects.all()
+        template = loader.get_template('DEMOAPP/Courses.html')
+        context = {'ac': ac }
+        return HttpResponse(template.render(context, request))
+
+Views can also accept parameters:
+
+    def detail(request, course_id):
+        return HttpResponse('<h2>These are course details for course id' +str(course_id)+'</h2>')
