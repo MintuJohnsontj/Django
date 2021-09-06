@@ -269,13 +269,15 @@ When a user makes a request for a page on your web app, Django controller takes 
         path('admin/', admin.site.urls),
         path('', include('DEMOAPP.urls')),
     ]
+..
+    from django.urls import path
+    from . import views
+
+    urlpatterns = [
+        path('<int:course_id>/', views.detail, name='detail'),
+        path('', views.Courses, name = 'home-page'),
+    ]
     
 ### Sending Parameters to Views
 
-from django.urls import path
-from . import views
 
-urlpatterns = [
-    path('<int:course_id>/', views.detail, name='detail'),
-    path('', views.Courses, name = 'home-page'),
-]
