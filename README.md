@@ -327,12 +327,13 @@ A model is a class that represents table or collection in our DB, and where ever
 
 ### Creating a Model
 
-from django.db import models
+    from django.db import models
 
-class AllCourses(models.Model):
-    coursename = models.CharField(max_length=200)
-    insname = models.CharField(max_length=100)
-    def __str__(self):
-        return self.coursename
+    class AllCourses(models.Model):
+        coursename = models.CharField(max_length=200)
+        insname = models.CharField(max_length=100)
+        def __str__(self):
+            return self.coursename
 
 Every model inherits from django.db.models.Model.
+
